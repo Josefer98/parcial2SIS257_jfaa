@@ -47,6 +47,9 @@ export class Programa {
 
   @DeleteDateColumn({ name: 'fecha_eliminacion' })
   fechaEliminacion: Date;
+  
+  @Column('varchar', { length: 50, name: 'modalidad_clases' })
+  modalidadclases: string;
 
   @ManyToOne(
     () => NivelesAcademico,

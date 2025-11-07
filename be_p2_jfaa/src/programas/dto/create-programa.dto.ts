@@ -74,4 +74,10 @@ export class CreateProgramaDto {
     typeof value === 'string' ? value.trim() : value,
   )
   readonly estado: string;
+
+  @ApiProperty()
+  @IsNotEmpty({ message: 'La modalidad de clases no debe estar vacia' })
+  @IsString({ message: 'La modalidad de clases debe ser una cadena de texto' })
+  readonly modalidadclases: string;
+
 }
